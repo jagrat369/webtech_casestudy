@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Big Hug Burger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Left Section - Yellow */
+    .left-section {
+      background-color: #FFC107;
+      color: #D50000;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logo img {
+      width: 40px;
+    }
+
+    .serve {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: transparent;
+      -webkit-text-stroke: 2px #D50000;
+    }
+
+    .sub-text {
+      font-size: 40px;
+      color: #D50000;
+      font-weight: bold;
+      margin-bottom: 40px;
+      line-height: 1.2;
+      text-align: center;
+      margin-right: 150px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #D50000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: transparent;
+      font-size: 24px;
+      color: #D50000;
+    }
+    .btn2{
+      background-color: white;
+    }
+
+    .button:hover {
+      background-color: #FFEB3B;
+    }
+
+    /* Right Section - Teal */
+    .right-section {
+      background-color: #00bbbd;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -100px;
+    }
+  
+
+    .burger {
+      width: 450px;  
+      margin-bottom: 50px;  
+      margin-top: -16px;  
+    }
+
+    /* Tagline and Text */
+    .tagline {
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      color: white;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .tagline .small {  /* Do from here*/
+      font-size: 20px;
+      position: absolute;
+      top: -30px;
+      left: 70px; /* Centering "The" above "g" */
+    }
+
+  
+
+    .hug-text {
+      font-size: 110px;
+      color: white;
+      text-transform: lowercase;
+      margin-top: 10px;
+    }
+
+    .burger-text {
+      font-size: 40px;
+      color: white;
+      margin-top: -20px;
+    }
+
+    .description {
+      font-size: 18px;
+      color: white;
+      margin-top: 30px;
+      font-weight: 400;
+      width: 250px;
+      text-align: right;
+    }
+
+    .first{
+     margin-top: 70px;
+     transform: rotate(355deg);
+     margin-right: 10px;
+    }
+
+    .last{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .last1{
+      width: 30%;
+    }
+    .last2{
+      width: 70%;
+    }
+
+    .image-container{
+      position: relative;
+      width: 500px;
+      height: 250px;
+      margin-left: 50px;
+      
+    }
+    .small{
+      display: inline;
+      font-size: 35px;
+      color: white;
+      margin-left: 88px;
+      position: absolute;
+      
+    }
+    .big-text {
+      font-size: 110px;
+      color: white;
+      display: inline;
+      margin-right: 18px;
+      margin-bottom: -10px;
+    }
+    .first-heading{
+      display: inline;
+      width: 96px;
+    }
+    .last-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 420px;
+      position: relative;
+      margin-left: 130px;
+      margin-top: -50px;
+
+    }
+    .big-hug{
+      color: white;
+      font-size: 110px;
+    }
+    .small-hug{
+      font-size: 40px;
+      color: white;
+      display: inline;
+      margin-top: -30px;
+      position: absolute;
+      
+    }
+    .about-hug{
+      color: white;
+      transform: rotate(350deg);
+      font-size: 20px;
+    }
+    .second-letter{
+      padding-left: 40px;
+     
+    }
+    .mid{
+      background-image: url('11.png');
+      background-size: cover;
+      width: 50px;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Left Section -->
+  <div class="left-section">
+    <div class="logo">
+      <img src="mc.jpg" alt="McDonald's Logo" />
+    </div>
+    <h1 class="serve">Now Serving</h1>
+    <div class="sub-text">
+      Two Good<br/>
+      <div style="margin-left: 42px;">Two Be True</div>
+       
+    </div>
+    <div class="buttons">
+      <button class="button btn1">&lt;</button>
+      <button class="button btn2">&gt;</button>
+    </div>
+  </div>
+
+  <div class="mid"></div>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <nav>
+      <a href="#">Menu</a>
+      <a href="#">Happy Meal</a>
+      <a href="#">Restaurants</a>
+      <a href="#">McDelivery</a>
+      <a href="#">News</a>
+    </nav>
+
+
+    <div class="main-container">
+      <div class="first">
+        <h1 class="small">The</h1>
+        <h1 class="big-text">Big</h1>  
+        </h1>
+      </div>
+      <div class="image-container">
+        <img src="burger.png" class="burger" alt="Burger" />
+      </div>
+      <!--
+      <div class="last">
+        
+        <div class="last1">
+          <h1>
+            <span class="big-text">hug</span>
+            <span class="small">Burger</span></h1>
+        </div>
+        <div class="last2">
+          <p class="description">Two yummy patties squeezed together in one tight hug.</p>
+        </div>
+        
+       </div> 
+        -->
+       <div class="last-container">
+        <div class="first-letter">
+          <h1 class="big-hug">hug</h1>
+          <h1 class="small-hug">burger</h1>
+        </div>
+        <div class="second-letter">
+          <p class="about-hug">Two yummy patties squeezed together in one tight hug.</p>
+        </div>
+       </div>
+    </div>
+  </div>
+
+<!--
+    <div class="tagline">
+      <span class="small">The</span>
+      <span class="big-text">Big</span>
+      <img src="burger.png" class="burger" alt="Burger" />
+      <div class="hug-text">hug</div>
+      <div class="burger-text">burger</div>
+    </div>
+   
+    <div class="description">
+      Two yummy patties squeezed together in one tight hug.
+    </div>
+  -->
+   
+  </div>
+</body>
+
+</html>
